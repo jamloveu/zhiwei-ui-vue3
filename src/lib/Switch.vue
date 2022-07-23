@@ -7,9 +7,11 @@ export default {
   props:{
     value:Boolean
   },
+  // props和context 传值方式
   setup(props,context){
     const toggle = ()=>{
-      context.emit('input', !props.value)
+      // 事件：vue3的v-model改动，之前是input
+      context.emit('update:value', !props.value)
     }
     return { toggle }
   }
