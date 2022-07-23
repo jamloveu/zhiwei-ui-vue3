@@ -3,6 +3,9 @@
     <h1>Button 示例</h1>
     <div>
       <Button @click="onClick">你好</Button>
+      <Button @click="onClick" theme="button">你好</Button>
+      <Button @click="onClick" theme="text">你好</Button>
+      <Button @click="onClick" theme="link">你好</Button>
     </div>
   </div>
 </template>
