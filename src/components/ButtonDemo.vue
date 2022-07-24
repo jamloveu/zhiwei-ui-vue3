@@ -1,11 +1,18 @@
 <template>
   <div>
-    <h1>Button 示例</h1>
+    <h1>Button 示例 1</h1>
     <div>
       <Button @click="onClick">你好</Button>
       <Button @click="onClick" theme="button">你好</Button>
       <Button @click="onClick" theme="text">你好</Button>
       <Button @click="onClick" theme="link">你好</Button>
+    </div>
+    <h1>Button 示例 2</h1>
+    <div>
+      <Button>你好</Button>
+      <Button size="big">你好</Button>
+      <Button size="small">你好</Button>
+      <Button size="mini">你好</Button>
     </div>
   </div>
 </template>
