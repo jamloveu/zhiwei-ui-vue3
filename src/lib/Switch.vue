@@ -1,5 +1,5 @@
 <template>
-  <button @click="toggle" :class="{checked:value}"><span></span></button>
+  <button class="zhiwei-switch" @click="toggle" :class="{'zhiwei-checked':value}"><span></span></button>
 </template>
 <script lang="ts">
 export default {
@@ -16,10 +16,10 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.zhiwei-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -38,7 +38,7 @@ button {
     transition: all 250ms;
   }
 
-  &.checked {
+  &.zhiwei-checked {
     background: #1890ff;
 
     > span {
@@ -56,7 +56,7 @@ button {
     }
   }
 
-  &.checked:active {
+  &.zhiwei-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;
