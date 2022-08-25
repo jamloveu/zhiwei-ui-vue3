@@ -2,13 +2,13 @@
   <template v-if="visible">
     <!-- Teleport，挂载到body下,防止Dialog被遮挡 -->
     <Teleport to="body">
-      <div class="zhiwei-dialog-overlay" @click="onClickOverlay"></div>
-      <div class="zhiwei-dialog-wrapper">
-        <div class="zhiwei-dialog">
+      <div class="zw-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="zw-dialog-wrapper">
+        <div class="zw-dialog">
           <header>
             <!-- 具名插槽，使用：v-slot:title -->
             <slot name="title" />
-            <span @click="close" class="zhiwei-dialog-close"></span>
+            <span @click="close" class="zw-dialog-close"></span>
           </header>
           <main>
             <slot name="content" />
@@ -76,7 +76,7 @@ export default {
 <style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
-.zhiwei-dialog {
+.zw-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);

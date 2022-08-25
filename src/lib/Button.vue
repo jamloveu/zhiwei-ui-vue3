@@ -1,6 +1,6 @@
 <template>
-  <button class="zhiwei-button" :class="classes">
-    <span v-if="loading" class="zhiwei-loadingIndicator"></span>
+  <button class="zw-button" :class="classes">
+    <span v-if="loading" class="zw-loadingIndicator"></span>
     <slot />
   </button>
 </template>
@@ -33,9 +33,9 @@ export default {
     const { theme, size, level } = props;
     const classes = computed(() => {
       return {
-        [`zhiwei-theme-${theme}`]: theme,
-        [`zhiwei-size-${size}`]: size,
-        [`zhiwei-level-${level}`]: level
+        [`zw-theme-${theme}`]: theme,
+        [`zw-size-${size}`]: size,
+        [`zw-level-${level}`]: level
       };
     });
     return { classes };
@@ -50,7 +50,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.zhiwei-button {
+.zw-button {
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -79,7 +79,7 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.zhiwei-theme-link {
+  &.zw-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -88,7 +88,7 @@ $grey: grey;
       color: lighten($blue, 10%);
     }
   }
-  &.zhiwei-theme-text {
+  &.zw-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -98,18 +98,18 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
-  &.zhiwei-size-big {
+  &.zw-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
-  &.zhiwei-size-small {
+  &.zw-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
-  &.zhiwei-theme-button {
-    &.zhiwei-level-main {
+  &.zw-theme-button {
+    &.zw-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -119,7 +119,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.zhiwei-level-danger {
+    &.zw-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -130,8 +130,8 @@ $grey: grey;
       }
     }
   }
-  &.zhiwei-theme-link {
-    &.zhiwei-level-danger {
+  &.zw-theme-link {
+    &.zw-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -139,15 +139,15 @@ $grey: grey;
       }
     }
   }
-  &.zhiwei-theme-text {
-    &.zhiwei-level-main {
+  &.zw-theme-text {
+    &.zw-level-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.zhiwei-level-danger {
+    &.zw-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -155,7 +155,7 @@ $grey: grey;
       }
     }
   }
-  &.zhiwei-theme-button {
+  &.zw-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -164,13 +164,13 @@ $grey: grey;
       }
     }
   }
-  &.zhiwei-theme-link, &.zhiwei-theme-text {
+  &.zw-theme-link, &.zw-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .zhiwei-loadingIndicator{
+  > .zw-loadingIndicator{
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -179,10 +179,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: zhiwei-spin 1s infinite linear;
+    animation: zw-spin 1s infinite linear;
   }
 }
-@keyframes zhiwei-spin {
+@keyframes zw-spin {
   0%{transform: rotate(0deg)}
   100%{transform: rotate(360deg)}
 }
