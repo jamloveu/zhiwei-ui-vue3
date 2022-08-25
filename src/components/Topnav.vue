@@ -1,5 +1,5 @@
 <template>
-  <div class="topnav">
+  <div class="topNav">
     <div class="logo">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
@@ -21,8 +21,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.topnav {
-  background: pink;
+.topNav {
+  //background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
