@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import {ref} from "vue";
-let status = ref(false)
+const props = defineProps(['modelValue'])
+const emits = defineEmits(['update:modelValue'])
 const onClick = ()=>{
-  status.value = !status.value
+  emits('update:modelValue',!props.modelValue)
 }
 </script>
 
 <template>
-  <div class="zw-switch" :class="status?'zw-switch-on':''" @click="onClick">
+  <div class="zw-switch" :class="props.modelValue?'zw-switch-on':''" @click="onClick">
     <span class="node"></span>
   </div>
 </template>
