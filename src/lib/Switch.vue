@@ -81,25 +81,24 @@ onMounted(() => {
   height: 1em;
   border-radius: 1em;
   font-size: 24px;
-  border: $switch-border-color;
   padding: 1px;
+  border: $switch-border-color;
 
   .node {
-    width: 50px;
-    height: 50px;
-    border: $switch-border-color;
-    background-color: #fff;
-    display: inline-block;
-    border-radius: 100%;
     position: absolute;
     top: 1px;
     left: 1px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 100%;
     transition: transform $switch-transition-duration cubic-bezier(0.3, 1.05, 0.4, 1.05);
+    border: $switch-border-color;
   }
 
   &-on {
     box-shadow: 0 0 0 1px rgba(45, 140, 240, .1);
-
     .node {
       transform: translateX(100%);
     }
